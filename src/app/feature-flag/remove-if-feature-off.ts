@@ -7,9 +7,8 @@ import { FeatureFlagService } from './feature-flag.service';
 export class RemoveIfFeatureOff implements OnInit {
   @Input('removeIfFeatureOff') featureName: string;
  
-  constructor(private el: ElementRef,
-              private featureFlagService: FeatureFlagService) {
-    this.featureName = 'test';
+  constructor(private el: ElementRef, private featureFlagService: FeatureFlagService) {
+    this.featureName = '';
   }
  
   ngOnInit() {
