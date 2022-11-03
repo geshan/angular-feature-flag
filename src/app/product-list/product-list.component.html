@@ -14,9 +14,11 @@
     Description: {{ product.description }}
   </p>
 
-  <button type="button" (click)="share()">
-    Share
-  </button>
+  <div [removeIfFeatureOff]="'follow_companies'">
+    <button type="button" (click)="share()">
+      Share
+    </button>
+  </div>
 
   <app-product-alerts
     [product]="product"
